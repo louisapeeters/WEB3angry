@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 3rem;
+    line-height: 0;
+}
+
+span:hover {
+    color: red;
+    cursor: pointer;
+    font-size: 5rem;
+}
