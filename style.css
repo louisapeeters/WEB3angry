@@ -1,0 +1,94 @@
+:root {
+    --error: #ff0000;
+    --primary: #000000;
+    --primary-light: #c9c9c9;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+body {
+    height: 100vh;
+    font-family: monospace;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+a {
+    color: var(--primary);
+}
+
+input {
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    border-bottom: dashed 1px var(--primary);
+    text-align: center;
+}
+
+input:focus {
+    outline-color: var(--primary);
+}
+
+input::placeholder {
+    color: var(--error);
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 3rem;
+    border: solid 2px var(--primary);
+    padding: 1rem;
+    background-color: var(--primary-light);
+}
+
+button {
+    grid-column: 1 / -1;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button:focus {
+    outline: solid 1px var(--primary);
+}
+
+input:invalid {
+    color: var(--error);
+    border-color: var(--error);
+}
+
+form:has(:invalid) button {
+    opacity: 0.1;
+    background-color: #ff0000;
+}
